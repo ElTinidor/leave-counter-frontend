@@ -23,7 +23,7 @@ function App() {
     formData.append("name", name);
 
     try {
-      const res = await axios.post("http://127.0.0.1:8000/count-leaves", formData, {
+      const res = await axios.post("https://leave-counter-backend-production.up.railway.app/count-leaves", formData, {
         headers: { "Content-Type": "multipart/form-data" }
       });
       setResult(res.data);
